@@ -1,0 +1,22 @@
+const operations = require('../../../mongoose/controllers/usersOperations');
+const validateNewUser = require('../../../joi/validateRegister')
+
+/** @type {import("express").RequestHandler} */
+async function createUser(req, res) {
+
+    const { error } = validateNewUser(req.body);
+    (req.body, 'create user function req.body');
+
+    if (error)
+        return res.status(400).json(error.details[0].message);
+
+    req.body.createdAt = new Date().toLocaleString();
+    const userFromDb = await operations.createAUserInMongoDb(req.body)
+    (userFromDb, 'userFromDb before status500');
+    if (!userFromDb) {
+        return res.status(500).json("General error. user not saved")
+    }
+    res.json(userFromDb);
+}
+
+module.exports = createUser;

@@ -1,0 +1,48 @@
+@import '../../_variables.scss';
+
+.fContain{
+    background: $navColor;
+    width: 100vw;
+    height: 100px;
+    position:fixed;
+    bottom: 0;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.598) ;
+    
+
+}
+a{
+    padding-left: 6px;
+    color: black;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+    a.active{
+    padding-left: 12px;
+} 
+
+.aFotter{
+    padding-right: 5px;
+    padding-top: 5px;
+    text-align: center;
+    margin-bottom: 12px; 
+    font-size: 0.9rem;
+    
+}
+.hello{
+    color: $textColor;
+    text-align: center;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+
+
+    
+}
+.footerText{
+    height: auto;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: $textColor;
+
+}

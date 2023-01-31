@@ -1,0 +1,32 @@
+<form *ngIf="form" class="frame" [formGroup]="form">
+  <h2 *ngIf="user._id">Edit User</h2>
+    <div>
+    <label class="field">User Name</label>
+    <input type="text" formControlName="userName" />
+    </div>
+
+    <div>
+    <label class="field">FullName</label>
+    <input type="" formControlName="fullName" />
+    </div>
+
+    <div>
+    <label class="field">Email</label>
+    <input type="email" formControlName="email" />
+    </div>
+
+    <div>
+    <label class="field">Password</label>
+    <input type="text" formControlName="password" />
+    </div>
+    <div>
+    <label class="field">Password Confirmation</label>
+    <input type="text" formControlName="passwordConfirmation" />
+    </div>
+
+    <div class="field">
+    <button *ngIf="user._id" (click)="update()" [disabled]="!form.valid">
+        Save user
+    </button>
+    </div>
+</form>

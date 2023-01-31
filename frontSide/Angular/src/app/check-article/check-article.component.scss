@@ -1,0 +1,25 @@
+@import '../../variables';
+
+.wraper{
+    border: 1px solid rgb(245, 169, 169);
+    margin: 20px;
+    padding: 20px;
+}
+
+div{
+
+    color: $textColor;
+    font-size: 1em;
+    line-height: 2;
+    text-align:left;
+}
+
+h2{
+    text-align: center;
+    
+}
+h2:hover{
+    color: $navHover;
+    text-decoration: underline;
+    cursor: pointer;
+}

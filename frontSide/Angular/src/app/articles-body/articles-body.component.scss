@@ -1,0 +1,85 @@
+@import '../../variables';
+
+h2 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    text-decoration: underline;
+    color: black;
+    font-family: $beutyText;
+    font-size: 2em;
+}
+
+.frame {
+    width: 400px;
+    max-width: 100%;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 6px #00000085;
+    padding: 20px;
+    @media (max-width: 480px){
+        width: 75%;
+    }
+
+}
+
+.field {
+    padding: 15px;
+
+}
+
+label {
+    margin-left: -15px;
+    margin-bottom: 3px;
+    color: $textColor;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #616161;
+
+}
+
+textarea {
+    font-size: 16px;
+    border-radius: 5px;
+    width: 110%;
+    box-sizing: border-box;
+    border: 1px solid #616161;
+    margin-bottom: 10px;
+
+}
+.ta{
+    margin-left: -15px;
+}
+
+input.ng-invalid.ng-dirty {
+    border: 1px solid red;
+}
+
+.btn{
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: none;
+    background: $navColor;
+    color: $textColor;
+    font-size: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn[disabled] {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.btn:hover {
+    box-shadow: 0 0 6px #94949485;
+    background: $navHover;
+    color: white;
+}
